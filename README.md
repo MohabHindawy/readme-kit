@@ -1,6 +1,6 @@
 # Readme Kit
 
-A browser tool for building animated SVG banners for your GitHub profile.
+readme-kit is a browser tool for building animated SVG banners for your GitHub profile.
 
 > Formerly SVG Crafter.
 
@@ -11,13 +11,13 @@ GitHub's image proxy (camo) makes fonts and animations a pain in READMEs. Readme
 ## What's new
 
 - **UI upgrade:** a refreshed editor with a cleaner layout and easier navigation.
-- **Templates:** ready-made designs where you only swap in your own content. Fastfetch is the first one, with more planned.
+- **Templates:** ready-made designs where you only swap in your own content. fastfetch is the first one, with more planned.
 
 ## Examples
 
-|                        Terminal                        |                        Arcade                        |                        Clean                        |
-| :----------------------------------------------------: | :--------------------------------------------------: | :-------------------------------------------------: |
-| [Terminal](https://mohabhindawy.github.io/readme-kit/) | [Arcade](https://mohabhindawy.github.io/readme-kit/) | [Clean](https://mohabhindawy.github.io/readme-kit/) |
+|                                     Terminal                                     |                                    Arcade                                    |                                    Clean                                     |
+| :------------------------------------------------------------------------------: | :--------------------------------------------------------------------------: | :--------------------------------------------------------------------------: |
+| [![Terminal](./assets/terminal.svg)](https://mohabhindawy.github.io/readme-kit/) | [![Arcade](./assets/sci-fi.svg)](https://mohabhindawy.github.io/readme-kit/) | [![Clean](./assets/ambient.svg)](https://mohabhindawy.github.io/readme-kit/) |
 
 _The links only work because the markdown wraps the image. GitHub's proxy strips `<a>` tags inside raw SVGs._
 
@@ -29,6 +29,18 @@ _The links only work because the markdown wraps the image. GitHub's proxy strips
 - **Fonts:** any Google Font, baked into the SVG as Base64 so it actually renders on GitHub.
 - **Effects:** scanlines, matrix rain, border beams and aurora glows and more.
 - **Templates:** ready-made and more complex designs where you only change the content.
+
+## Templates
+
+<details>
+  <summary><b>fastfetch</b></summary>
+  <br>
+  <div align="center">
+    <a href="https://mohabhindawy.github.io/readme-kit/">
+      <img src="./assets/fastfetch.svg" alt="fastfetch" width="80%">
+    </a>
+  </div>
+</details>
 
 ## How to use it
 
@@ -49,8 +61,6 @@ _The links only work because the markdown wraps the image. GitHub's proxy strips
 
 ## Development
 
-Built with React and Vite. Everything runs in the browser, with no backend and nothing stored.
-
 ```bash
 git clone https://github.com/MohabHindawy/readme-kit.git
 cd readme-kit
@@ -61,10 +71,6 @@ npm run dev
 ### Adding a template
 
 Drop a file in `src/templates/` exporting an object with `id`, `name`, `desc`, plus `defaults()`, `sanitize(raw)`, `generate(config)`, `alt(config)` and an `Editor` component. Register it in the `TEMPLATES` list in `src/templates/index.js`. Reuse helpers from `shared.jsx` where you can.
-
-### Deployment
-
-Pushing to `main` runs `.github/workflows/deploy.yml`, which builds the `readme-kit/` folder and publishes `dist/` to GitHub Pages.
 
 ## Contributing
 
