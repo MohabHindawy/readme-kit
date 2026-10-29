@@ -194,12 +194,12 @@ function get3dGlyph(char) {
 
 const logoCache = new Map();
 
-function buildLogo(letter = "S") {
+function buildLogo(letter = "R") {
   const norm =
-    String(letter || "S")
+    String(letter || "R")
       .toUpperCase()
-      .trim()[0] || "S";
-  const valid = /^[A-Z0-9]$/.test(norm) ? norm : "S";
+      .trim()[0] || "R";
+  const valid = /^[A-Z0-9]$/.test(norm) ? norm : "R";
   if (logoCache.has(valid)) return logoCache.get(valid);
 
   const [glyphChars, glyphTiers] = get3dGlyph(valid);
@@ -248,7 +248,7 @@ function defaults() {
     THEMES.find((t) => t.id === DEFAULT_THEME_ID) || THEMES[0];
   return {
     terminalName: "Konsole",
-    letter: "S",
+    letter: "R",
     title: "your@name",
     rows: [
       { id: "row-1", label: "Role", value: "Your title" },
@@ -291,7 +291,7 @@ function sanitize(raw) {
     .toUpperCase()
     .replace(/[^A-Z0-9]/g, "");
   if (!letter || letter.length > 1) {
-    letter = letter ? letter[0] : "S";
+    letter = letter ? letter[0] : "R";
   }
 
   const title = stripControl(
@@ -581,7 +581,7 @@ function Editor({ value, onChange, Section, onReplay }) {
       <Section
         title="Logo"
         defaultOpen
-        summary={`Letter '${value.letter || "S"}'`}
+        summary={`Letter '${value.letter || "R"}'`}
       >
         <div className="field">
           <span>Logo letter (A-Z, 0-9)</span>
@@ -637,7 +637,7 @@ function Editor({ value, onChange, Section, onReplay }) {
               }}
               onBlur={() => {
                 if (!value.letter) {
-                  patch({ letter: "S" });
+                  patch({ letter: "R" });
                 }
               }}
               style={{
