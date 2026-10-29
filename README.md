@@ -1,6 +1,6 @@
 # Readme Kit
 
-readme-kit is a browser tool for building animated SVG banners for your GitHub profile.
+Readme Kit is a browser tool for building animated SVG banners for your GitHub profile.
 
 > Formerly SVG Crafter.
 
@@ -14,6 +14,8 @@ GitHub's image proxy (camo) makes fonts and animations a pain in READMEs. Readme
 - **Templates:** ready-made designs where you only swap in your own content. fastfetch is the first one, with more planned.
 
 ## Examples
+
+Here are a few designs you can make.
 
 |                                     Terminal                                     |                                    Arcade                                    |                                    Clean                                     |
 | :------------------------------------------------------------------------------: | :--------------------------------------------------------------------------: | :--------------------------------------------------------------------------: |
